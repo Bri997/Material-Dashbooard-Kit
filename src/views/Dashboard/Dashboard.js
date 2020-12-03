@@ -46,7 +46,7 @@ export default function Dashboard() {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={6}>
+        <GridItem xs={12} sm={12} md={12}>
           <CustomTabs
             title="Tasks:"
             headerColor="primary"
@@ -87,7 +87,9 @@ export default function Dashboard() {
             ]}
           />
         </GridItem>
-        <GridItem xs={12} sm={12} md={6}>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="warning">
               <h4 className={classes.cardTitleWhite}>Insured Vehicles</h4>
