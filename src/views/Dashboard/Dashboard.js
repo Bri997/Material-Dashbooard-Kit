@@ -48,12 +48,11 @@ export default function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <CustomTabs
-            title="Tasks:"
-            headerColor="primary"
+            title='Page:'
+            headerColor='primary'
             tabs={[
               {
-                tabName: 'Bugs',
-                tabIcon: BugReport,
+                tabName: 'Page 1',
                 tabContent: (
                   <Tasks
                     checkedIndexes={[0, 3]}
@@ -63,8 +62,8 @@ export default function Dashboard() {
                 ),
               },
               {
-                tabName: 'Website',
-                tabIcon: Code,
+                tabName: 'Page 2',
+
                 tabContent: (
                   <Tasks
                     checkedIndexes={[0]}
@@ -74,8 +73,8 @@ export default function Dashboard() {
                 ),
               },
               {
-                tabName: 'Server',
-                tabIcon: Cloud,
+                tabName: 'Page 3',
+
                 tabContent: (
                   <Tasks
                     checkedIndexes={[1]}
@@ -91,13 +90,13 @@ export default function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card>
-            <CardHeader color="warning">
+            <CardHeader color='warning'>
               <h4 className={classes.cardTitleWhite}>Insured Vehicles</h4>
               <p className={classes.cardCategoryWhite}>Cyberdyne Systems</p>
             </CardHeader>
             <CardBody>
               <Table
-                tableHeaderColor="warning"
+                tableHeaderColor='warning'
                 tableHead={['ID', 'Name', 'Price', 'Vehicle']}
                 tableData={[
                   ['1', 'Dakota Rice', '$36,738', 'Chevy'],
