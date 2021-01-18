@@ -28,7 +28,10 @@ import CardHeader from 'components/Card/CardHeader.js'
 import CardIcon from 'components/Card/CardIcon.js'
 import CardBody from 'components/Card/CardBody.js'
 import CardFooter from 'components/Card/CardFooter.js'
-
+import NewInput from 'components/Inputs/NewInput'
+import PageOne from 'components/Questions/PageOne'
+import PageTwo from 'components/Questions/PageTwo'
+import PageThree from 'components/Questions/PageThree'
 import { bugs, website, server } from 'variables/general.js'
 
 import {
@@ -53,35 +56,17 @@ export default function Dashboard() {
             tabs={[
               {
                 tabName: 'Page 1',
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0, 3]}
-                    tasksIndexes={[0, 1, 2, 3]}
-                    tasks={bugs}
-                  />
-                ),
+                tabContent: <PageOne />,
               },
               {
                 tabName: 'Page 2',
 
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0]}
-                    tasksIndexes={[0, 1]}
-                    tasks={website}
-                  />
-                ),
+                tabContent: <PageTwo />,
               },
               {
                 tabName: 'Page 3',
 
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[1]}
-                    tasksIndexes={[0, 1, 2]}
-                    tasks={server}
-                  />
-                ),
+                tabContent: <PageThree />,
               },
             ]}
           />
@@ -92,17 +77,17 @@ export default function Dashboard() {
           <Card>
             <CardHeader color='warning'>
               <h4 className={classes.cardTitleWhite}>Insured Vehicles</h4>
-              <p className={classes.cardCategoryWhite}>Cyberdyne Systems</p>
+              <p className={classes.cardCategoryWhite}>John Smith</p>
             </CardHeader>
             <CardBody>
               <Table
                 tableHeaderColor='warning'
-                tableHead={['ID', 'Name', 'Price', 'Vehicle']}
+                tableHead={['ID', 'Make', 'Model', 'Miles/Hours']}
                 tableData={[
-                  ['1', 'Dakota Rice', '$36,738', 'Chevy'],
-                  ['2', 'Minerva Hooper', '$23,789', 'Toyota'],
-                  ['3', 'Sage Rodriguez', '$56,142', 'Nssian'],
-                  ['4', 'Philip Chaney', '$38,735', 'Ford'],
+                  ['1', 'Chevy', 'S10', '23,000'],
+                  ['2', 'Nissan', 'Rouge', '77,500'],
+                  ['3', 'John Deere', 'Combine', '5000 hr'],
+                  ['4', 'Porsche', 'GT2 RS', '100'],
                 ]}
               />
             </CardBody>
