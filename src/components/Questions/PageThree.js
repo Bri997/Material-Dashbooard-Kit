@@ -51,7 +51,7 @@ const PageThree = () => {
       >
         {({ values, errors, isSubmitting }) => (
           <form>
-            <h2>Gross Sales</h2>
+            <h4>Gross Sales</h4>
             <p>
               Please NAICS or SIC code for all operations. If you do not have
               the codes, please provide a description of operations.(e.g. 10020
@@ -95,7 +95,7 @@ const PageThree = () => {
                 })}
               </div>
             </FieldArray>
-            <h2>Drivers</h2>
+            <h4>Drivers</h4>
             <p>Enter here or upload to page 4</p>
 
             <FieldArray name='drivers'>
@@ -179,7 +179,7 @@ const PageThree = () => {
                 </div>
               )}
             </FieldArray>
-            <h2>Vehicles</h2>
+            <h4>Vehicles</h4>
             <FieldArray name='vehicles'>
               {(arrayHelpers) => (
                 <div>
@@ -261,7 +261,7 @@ const PageThree = () => {
                 </div>
               )}
             </FieldArray>
-            <h2>Equipment</h2>
+            <h4>Equipment</h4>
             <FieldArray name='equipment'>
               {(arrayHelpers) => (
                 <div>

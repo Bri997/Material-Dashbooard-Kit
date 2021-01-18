@@ -27,7 +27,7 @@ const PageOne = () => {
       >
         {({ values, errors, isSubmitting }) => (
           <Form>
-            <h2>Legal Name of Business</h2>
+            <h4>Legal Name of Business</h4>
             <Field
               placeholder='Business Name'
               name='nameOfBusiness'
@@ -37,7 +37,7 @@ const PageOne = () => {
               variant='outlined'
               className={classes.textField}
             />
-            <h2>Brief Business Description</h2>
+            <h4>Brief Business Description</h4>
             <MultiLine
               placeholder='Tell us about your company, its history, and all the things that make you great!'
               name='businessDescription'
@@ -47,7 +47,7 @@ const PageOne = () => {
               fullWidth
               className={classes.multiLine}
             />
-            <h2>FEIN of Business</h2>
+            <h4>FEIN of Business</h4>
             <Field
               placeholder='FEIN'
               name='fein'
@@ -57,7 +57,7 @@ const PageOne = () => {
               variant='outlined'
               className={classes.textField}
             />
-            <h2>Company Website</h2>
+            <h4>Company Website</h4>
             <Field
               placeholder='Website URL'
               name='website'
@@ -67,7 +67,7 @@ const PageOne = () => {
               variant='outlined'
               className={classes.textField}
             />
-            <h2>Physical Address</h2>
+            <h4>Physical Address</h4>
             <MultiLine
               placeholder='Physical Address'
               name='physicalAddress'
@@ -81,7 +81,7 @@ const PageOne = () => {
               Physical address same as mailing ?
               <Field name='sameAddress' type='checkbox' as={Checkbox} />
             </div>
-            <h2>Mailing Address</h2>
+            <h4>Mailing Address</h4>
             <MultiLine
               placeholder='Mailing Address'
               name='mailingAddress'
@@ -91,7 +91,7 @@ const PageOne = () => {
               fullWidth={true}
               className={classes.multiLine}
             />
-            <h2>Primary Contact Name</h2>
+            <h4>Primary Contact Name</h4>
             <Field
               placeholder='First Name'
               name='primaryContactFirstName'
@@ -110,7 +110,7 @@ const PageOne = () => {
               variant='outlined'
               className={classes.textField}
             />
-            <h2>Phone</h2>
+            <h4>Phone</h4>
             <Field
               placeholder='Phone'
               name='primaryContactPhone'
@@ -120,7 +120,7 @@ const PageOne = () => {
               variant='outlined'
               className={classes.textField}
             />
-            <h2>Primary Contact Email</h2>
+            <h4>Primary Contact Email</h4>
             <Field
               placeholder='Email'
               name='primaryContactEmail'

@@ -43,7 +43,7 @@ const PageTwo = () => {
       >
         {({ values, errors, isSubmitting }) => (
           <form>
-            <h2>Other Named Insured(s)</h2>
+            <h4>Other Named Insured(s)</h4>
             <p>
               Do have a separate company or LLC that owns your building? Any
               Other entity that you operate under?
@@ -57,7 +57,7 @@ const PageTwo = () => {
               fullWidth
               className={classes.multiLine}
             />
-            <h2>Other Named Insured(s) Operations</h2>
+            <h4>Other Named Insured(s) Operations</h4>
             <p>
               If you own other companies or LLC's, please tell us about those
               operations.
@@ -71,7 +71,7 @@ const PageTwo = () => {
               fullWidth
               className={classes.multiLine}
             />
-            <h2>Other Named Insured FEIN(s)</h2>
+            <h4>Other Named Insured FEIN(s)</h4>
             <Field
               placeholder='If applicable'
               name='otherFEIN'
@@ -81,7 +81,7 @@ const PageTwo = () => {
               variant='outlined'
               className={classes.textField}
             />
-            <h2>Ownership Information</h2>
+            <h4>Ownership Information</h4>
 
             <FieldArray name='ownershipsInfo'>
               {(arrayHelpers) => (
@@ -159,7 +159,7 @@ const PageTwo = () => {
             </FieldArray>
             <div>
               <div>
-                <h2>Location Information </h2>
+                <h4>Location Information </h4>
                 <FieldArray name='locations'>
                   {(arrayHelpers) => (
                     <div>
@@ -173,10 +173,10 @@ const PageTwo = () => {
                               type='input'
                               as={TextField}
                             />
-                            <h2>
+                            <h4>
                               Description of operations (Office, Storage,
                               Warehouse, Manufacturing, etc)
-                            </h2>
+                            </h4>
                             <Field
                               name={`locations.${index}.locationOperations`}
                               placeholder='operations'
@@ -184,7 +184,7 @@ const PageTwo = () => {
                               type='input'
                               as={TextField}
                             />
-                            <h2>Are you the building owner?</h2>
+                            <h4>Are you the building owner?</h4>
                             <RadioSelect
                               name={`locations.${index}.buildingOwner`}
                               type='radio'
@@ -197,7 +197,7 @@ const PageTwo = () => {
                               value='no'
                               label='No'
                             />
-                            <h2>Do you lease any space to others?</h2>
+                            <h4>Do you lease any space to others?</h4>
                             <RadioSelect
                               name={`locations.${index}.LeaseSpaceToOthers`}
                               type='radio'
@@ -210,7 +210,7 @@ const PageTwo = () => {
                               value='no'
                               label='No'
                             />
-                            <h2>Location construction information</h2>
+                            <h4>Location construction information</h4>
                             <p>
                               Does the building have sprinklers? Does it have a
                               basement? When was the last time roof, HVAC,
@@ -225,7 +225,7 @@ const PageTwo = () => {
                               fullWidth
                               className={classes.multiLine}
                             />
-                            <h2>Location value of contents</h2>
+                            <h4>Location value of contents</h4>
                             <p>
                               If we took all contents out of your building and
                               set them outside, what would be the total value?{' '}

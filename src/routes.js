@@ -77,14 +77,14 @@ const dashboardRoutes = [
   //   component: Icons,
   //   layout: '/admin',
   // },
-  {
-    path: '/maps',
-    name: 'Contact Us',
+  // {
+  //   path: '/maps',
+  //   name: 'Contact Us',
 
-    icon: LocationOn,
-    component: Maps,
-    layout: '/admin',
-  },
+  //   icon: LocationOn,
+  //   component: Maps,
+  //   layout: '/admin',
+  // },
   {
     path: '/notifications',
     name: 'Notifications',
