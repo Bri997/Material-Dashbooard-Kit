@@ -28,7 +28,10 @@ import CardHeader from 'components/Card/CardHeader.js'
 import CardIcon from 'components/Card/CardIcon.js'
 import CardBody from 'components/Card/CardBody.js'
 import CardFooter from 'components/Card/CardFooter.js'
-
+import NewInput from 'components/Inputs/NewInput'
+import PageOne from 'components/Questions/PageOne'
+import PageTwo from 'components/Questions/PageTwo'
+import PageThree from 'components/Questions/PageThree'
 import { bugs, website, server } from 'variables/general.js'
 
 import {
@@ -46,212 +49,45 @@ export default function Dashboard() {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="warning" stats icon>
-              <CardIcon color="warning">
-                <Icon>content_copy</Icon>
-              </CardIcon>
-              <p className={classes.cardCategory}>Used Space</p>
-              <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
-              </h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Danger>
-                  <Warning />
-                </Danger>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Get more space !!
-                </a>
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="success" stats icon>
-              <CardIcon color="success">
-                <Store />
-              </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
-              <h3 className={classes.cardTitle}>$34,245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <DateRange />
-                Last 24 Hours
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="danger" stats icon>
-              <CardIcon color="danger">
-                <Icon>info_outline</Icon>
-              </CardIcon>
-              <p className={classes.cardCategory}>Fixed Issues</p>
-              <h3 className={classes.cardTitle}>75</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <LocalOffer />
-                Tracked from Github
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
-                <Accessibility />
-              </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
-              <h3 className={classes.cardTitle}>+245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Update />
-                Just Updated
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-      </GridContainer>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="success">
-              <ChartistGraph
-                className="ct-chart"
-                data={dailySalesChart.data}
-                type="Line"
-                options={dailySalesChart.options}
-                listener={dailySalesChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
-              <p className={classes.cardCategory}>
-                <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
-                </span>{' '}
-                increase in today sales.
-              </p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="warning">
-              <ChartistGraph
-                className="ct-chart"
-                data={emailsSubscriptionChart.data}
-                type="Bar"
-                options={emailsSubscriptionChart.options}
-                responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                listener={emailsSubscriptionChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="danger">
-              <ChartistGraph
-                className="ct-chart"
-                data={completedTasksChart.data}
-                type="Line"
-                options={completedTasksChart.options}
-                listener={completedTasksChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-      </GridContainer>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={6}>
+        <GridItem xs={12} sm={12} md={12}>
           <CustomTabs
-            title="Tasks:"
-            headerColor="primary"
+            title='Page:'
+            headerColor='primary'
             tabs={[
               {
-                tabName: 'Bugs',
-                tabIcon: BugReport,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0, 3]}
-                    tasksIndexes={[0, 1, 2, 3]}
-                    tasks={bugs}
-                  />
-                ),
+                tabName: 'Page 1',
+                tabContent: <PageOne />,
               },
               {
-                tabName: 'Website',
-                tabIcon: Code,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[0]}
-                    tasksIndexes={[0, 1]}
-                    tasks={website}
-                  />
-                ),
+                tabName: 'Page 2',
+
+                tabContent: <PageTwo />,
               },
               {
-                tabName: 'Server',
-                tabIcon: Cloud,
-                tabContent: (
-                  <Tasks
-                    checkedIndexes={[1]}
-                    tasksIndexes={[0, 1, 2]}
-                    tasks={server}
-                  />
-                ),
+                tabName: 'Page 3',
+
+                tabContent: <PageThree />,
               },
             ]}
           />
         </GridItem>
-        <GridItem xs={12} sm={12} md={6}>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={12}>
           <Card>
-            <CardHeader color="warning">
+            <CardHeader color='warning'>
               <h4 className={classes.cardTitleWhite}>Insured Vehicles</h4>
-              <p className={classes.cardCategoryWhite}>Cyberdyne Systems</p>
+              <p className={classes.cardCategoryWhite}>John Smith</p>
             </CardHeader>
             <CardBody>
               <Table
-                tableHeaderColor="warning"
-                tableHead={['ID', 'Name', 'Price', 'Vehicle']}
+                tableHeaderColor='warning'
+                tableHead={['ID', 'Make', 'Model', 'Miles/Hours']}
                 tableData={[
-                  ['1', 'Dakota Rice', '$36,738', 'Chevy'],
-                  ['2', 'Minerva Hooper', '$23,789', 'Toyota'],
-                  ['3', 'Sage Rodriguez', '$56,142', 'Nssian'],
-                  ['4', 'Philip Chaney', '$38,735', 'Ford'],
+                  ['1', 'Chevy', 'S10', '23,000'],
+                  ['2', 'Nissan', 'Rouge', '77,500'],
+                  ['3', 'John Deere', 'Combine', '5000 hr'],
+                  ['4', 'Porsche', 'GT2 RS', '100'],
                 ]}
               />
             </CardBody>
